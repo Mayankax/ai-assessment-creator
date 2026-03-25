@@ -1,5 +1,7 @@
+const BASE_URL = "https://ai-assessment-creator-d117.onrender.com";
+
 export async function createAssignment(data: any) {
-  const res = await fetch("http://localhost:5000/api/assignment/create", {
+  const res = await fetch(`${BASE_URL}/api/assignment/create`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -11,19 +13,18 @@ export async function createAssignment(data: any) {
 }
 
 export async function getAssignment(jobId: string) {
-  const res = await fetch(`http://localhost:5000/api/assignment/${jobId}`);
+  const res = await fetch(`${BASE_URL}/api/assignment/${jobId}`);
   return res.json();
 }
 
 export async function getAllAssignments() {
-  const res = await fetch("http://localhost:5000/api/assignment");
+  const res = await fetch(`${BASE_URL}/api/assignment`);
   return res.json();
 }
 
-
 export async function deleteAssignment(jobId: string) {
   const res = await fetch(
-    `http://localhost:5000/api/assignment/${jobId}`,
+    `${BASE_URL}/api/assignment/${jobId}`,
     {
       method: "DELETE",
     }

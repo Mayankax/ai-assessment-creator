@@ -40,7 +40,7 @@ export default function OutputPaper({ data, jobId }: OutputPaperProps) {
 
           <button
             onClick={() =>
-              window.open(`http://localhost:5000/api/assignment/${jobId}/pdf`)
+              window.open(`https://ai-assessment-creator-d117.onrender.com/api/assignment/${jobId}/pdf`)
             }
             className="px-4 py-2 bg-white text-black rounded-[8px] text-[12px]"
           >
